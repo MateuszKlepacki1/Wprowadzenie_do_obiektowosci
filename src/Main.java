@@ -27,30 +27,8 @@ public class Main {
         System.out.println("So Your car will be: "+ Mini.getBrand()+ " . Color of your car is: " + Mini.getColour() + ". Your "+ Mini.getBrand()+ " will have " + Mini.getDoorsAmount() + " doors. Also, You will have an gerabox (True - you have an automatic gearbox / False - youhave manual gearbox): "+ Mini.getAutomaticGearbox() + ".");
     }
 }
-*/
-                /*/
-        int a;
-        int b;
-        a=10;
-        b=2;
-        int c;
-        c=a-b;
-        System.out.println(c);
+____________________________________________________________________
 
-
-        Calculator calc = new Calculator();
-        calc.summary(5, 2);
-        System.out.println("The result of summary is: " + calc.summary(5, 2));
-
-        calc.subtraction(9, 4);
-        System.out.println("The result of subtraction is: " + calc.subtraction(9, 4));
-
-        calc.multiplication(4, 3);
-        System.out.println("The result of multiplication is: " + calc.multiplication(4, 3));
-
-        calc.division(8, 4);
-        System.out.println("The result of division is: " + calc.division(8, 4));
-*/
         Calculator calc = new Calculator();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Give first number: ");
@@ -61,5 +39,29 @@ public class Main {
         System.out.println("The subtraction result is: " + calc.subtraction(firstVariable,secondVariable));
         System.out.println("The multiplication result is: " + calc.multiplication(firstVariable,secondVariable));
         System.out.println("The division result is: " + calc.division(firstVariable,secondVariable));
+*/
+        Calculator calc = new Calculator();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What do you want to do? Write correct sign: '/' for division +' for summary , '-' for subtraction, '*' for multiplication");
+        String sign = scanner.next();
+        System.out.println("Give first number: ");
+        int z = scanner.nextInt();
+        System.out.println("Give second number: ");
+        int c = scanner.nextInt();
+        switch (sign) {
+            case "+":
+                System.out.println("Summary result is: " + calc.summary(z, c));
+                break;
+            case "-":
+                System.out.println("Subtraction result is " + calc.subtraction(z, c));
+                break;
+            case "*":
+                System.out.println("Multiplication result is: " + calc.multiplication(z,c));
+                break;
+            case "/":
+                System.out.println("Division result is: "+calc.division(z,c));
+                break;
+        }
     }
 }
+
